@@ -1,0 +1,17 @@
+package top.lllyl2012
+
+rule "gold"
+when
+    $m:Member(identity == "gold")
+then
+    $m.setResult(0.7);
+    update($m)
+end
+
+rule "silver"
+when
+    $m:Member(identity == "gold")
+then
+    $m.setResult(0.8);
+    update($m)
+end
